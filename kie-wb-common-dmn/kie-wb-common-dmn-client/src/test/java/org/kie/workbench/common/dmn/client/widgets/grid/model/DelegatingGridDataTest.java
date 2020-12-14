@@ -295,6 +295,13 @@ public class DelegatingGridDataTest {
     }
 
     @Test
+    public void testDelegateGetGridSelectedCells() {
+        uiModel.getGridSelectedCells();
+
+        verify(delegate).getGridSelectedCells();
+    }
+
+    @Test
     public void testDelegateGetCell() {
         uiModel.getCell(0, 1);
 

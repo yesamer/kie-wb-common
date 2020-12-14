@@ -17,6 +17,7 @@
 package org.kie.workbench.common.dmn.client.widgets.grid.model;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.function.Supplier;
 
 import org.uberfire.ext.wires.core.grids.client.model.GridCell;
@@ -92,6 +93,11 @@ public class DelegatingGridData implements GridData {
     @Override
     public List<SelectedCell> getSelectedHeaderCells() {
         return delegate.getSelectedHeaderCells();
+    }
+
+    @Override
+    public Optional<List<SelectedCell>> getGridSelectedCells() {
+        return delegate.getGridSelectedCells();
     }
 
     @Override
